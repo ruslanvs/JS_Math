@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        function zero_negativity( arr ){
+            for( let i = 0; arr.length; i++ ){
+                if( arr[i] < 0 )
+                    return false;
+            }
+            return true;
+        }
+        let a = [2, 3, -2, 2];
+        let b = [2, 3, 2, 2];
+        console.log( zero_negativity( a ) );
+        console.log( zero_negativity( b ) );
+
+        function is_even( nr ){
+            if( nr%2 == 0 )
+            return true;
+            else{
+                return false;
+            }
+        }
+        console.log( is_even( 2 ) );
+        console.log( is_even( 3 ) );
+        
+        function how_many_even( arr ){
+            let even_nr = 0;
+            for( let i = 0; i < arr.length; i++ ){
+                if( is_even( arr[i]) ){
+                    even_nr++;
+                }
+            }
+            return even_nr;
+        }
+        let c = [2, 4, 5];
+        console.log( how_many_even( c ) );
+
+        function create_dummy_array( n ){
+            arr = [];
+            for( let i = 0; i < n; i++ ){
+                arr[i] = Math.floor( Math.random() * 10 );
+            }
+            return arr;
+        }
+        console.log( create_dummy_array( 20 ) );
+
+        function random_choice( arr ){
+            index = Math.floor( Math.random() * arr.length )
+            return arr[index];
+        }
+        let d = [2, 4, 5];
+        console.log( random_choice( d ) );
+
+
+
+    </script>
+    
+</body>
+</html>
